@@ -1,20 +1,23 @@
 :root {
   --primary: rgba(189, 195, 199, 0);
   /* --secondary: rgba(44, 62, 80, 1); */
-  --secondary: rgba(44, 62, 80, 1);
+  --secondary1: rgba(255, 255, 255, 0.2);
+  --secondary: rgba(255, 255, 255, 0.4);
 }
 
 .main {
   width: 100%;
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 .navbar {
   height: fit-content;
-  width: 100%;
-  border: 1px solid;
-  margin: 0;
+  border: 0;
   display: flex;
   align-items: center;
+  background-color: rgb(216, 216, 216);
+  margin: 1rem;
+  border-radius: 50px;
 }
 .logo {
   width: 60px;
@@ -31,13 +34,121 @@
   font-size: 1.2rem;
   margin: auto;
 }
-.bg {
-  height: 400px;
+.bg1 {
+  height: 500px;
   width: 100%;
-  background-image: linear-gradient(180deg, var(--primary), var(--secondary)),
-    url("../images/b1.webp");
+  background-image: linear-gradient(
+      180deg,
+      var(--primary),
+      var(--primary),
+      var(--primary),
+      var(--primary),
+      var(--primary),
+      var(--secondary1),
+      var(--secondary)
+    ),
+    url("../images/bex.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  position: absolute;
+}
+
+.bg2 {
+  height: 100%;
+  width: 700px;
+  background-image: url("../images/doc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.bg-main {
+  display: flex;
+  position: absolute;
+  height: 500px;
+  width: 100%;
+}
+
+.bgContainer {
+  height: 600px;
+  width: 100%;
+}
+.bgContainer h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 4rem;
+  padding: 0;
+  width: fit-content;
+  margin: 1rem auto;
+}
+
+.one {
+  color: rgba(0, 150, 60, 1);
+  font-size: 3.5rem;
+  margin: auto 2rem;
+}
+.two {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sp2 {
+  font-size: 2.5rem;
+}
+.sp1 {
+  font-size: 3rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+  width: 100%;
+}
+.content h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: rgb(42, 88, 60);
+}
+.content p {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+.content button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(42, 88, 60);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+  background-color: rgb(13, 161, 80);
+}
+
+.content button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 161, 80, 1);
+}
+.content button:active {
+  background-color: rgb(10, 120, 60);
+}
+.content button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
