@@ -123,32 +123,85 @@
   font-size: 1.5rem;
   margin: 1.5rem;
 }
-.content button {
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  gap: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  background-color: whitesmoke;
+}
+
+.getStartedBtn {
   width: 200px;
   height: 50px;
   border-radius: 25px;
-  border: none;
   background-color: rgb(42, 88, 60);
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.content button:hover {
-  background-color: rgb(13, 161, 80);
-}
-
-.content button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(13, 161, 80, 1);
-}
-.content button:active {
-  background-color: rgb(10, 120, 60);
-}
-.content button {
+  transition: background-color 0.3s ease-in-out;
   margin: 1rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
+  border: 1px solid #ccc;
+}
+
+.buttonContainer .getStartedBtn:hover {
+  background-color: rgb(13, 161, 80);
+}
+
+.buttonContainers .getStartedBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 161, 80, 1);
+}
+.buttonContainer .getStartedBtn:active {
+  background-color: rgb(10, 120, 60);
+}
+
+.SignInBtn {
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: rgb(184, 124, 12);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  letter-spacing: 1px;
+}
+.SignInBtn:hover {
+  background-color: transparent;
+  border: 2px solid rgb(184, 124, 12);
+  color: rgb(184, 124, 12);
+}
+
+.SignUpBtn {
+  transition: background-color 0.3s ease-in-out;
+  color: rgb(42, 88, 60);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(192, 192, 184);
+  border: none;
+}
+
+.SignUpBtn:hover {
+  background-color: rgb(42, 88, 60);
+  color: white;
+  border: none;
 }

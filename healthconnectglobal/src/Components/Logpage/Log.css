@@ -1,0 +1,193 @@
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sign in form */
+.signin-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.min-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.min-div label {
+  width: 100px;
+  text-align: left;
+  margin: 10px 2rem;
+}
+
+.min-div input {
+  width: 400px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Signup form */
+.signup-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.signup-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.min-div-signup {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+form button {
+  width: 430px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+}
+.phone-input {
+  width: 400px;
+  padding: 0.2rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.error-border {
+  border: 2px solid red;
+}
+
+.phone {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.phone label {
+  width: 100px;
+  text-align: left;
+  margin: 10px 2rem;
+}
+
+.gender label {
+  width: 100px;
+  text-align: left;
+  margin: 10px 2rem;
+}
+
+.gender select {
+  width: 400px;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.password input {
+  width: 360px;
+}
+.password .passwordVisibility {
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.show {
+  background-image: url("../images/hide.webp");
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 25px;
+  width: 35px;
+  background-repeat: no-repeat;
+}
+.hide {
+  background-image: url("../images/show.jpg");
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 35px;
+}
+.gpsInfo {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight: light;
+  line-height: 15px;
+  border: 1px solid #ccc;
+  margin: 0 0 0 5px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  cursor: pointer;
+}
+.loc {
+  width: 320px !important;
+}
+
+/* error message */
+.location-error-input {
+  color: #ff6666;
+}
+
+.loc::placeholder {
+  color: #aaa;
+}
+
+.location-error-input::placeholder {
+  color: transparent; /* Hide placeholder when error is active */
+}

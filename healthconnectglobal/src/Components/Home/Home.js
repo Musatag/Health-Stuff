@@ -36,7 +36,11 @@ function Home() {
           Your one-stop solution for managing health records, connecting with
           healthcare providers, and accessing medical resources globally.
         </p>
-        <button className="getStartedBtn">Get Started</button>
+        <div className="buttonContainer">
+          <button className="getStartedBtn">Get Started</button>
+          <button className="SignInBtn">Sign In</button>
+          <button className="SignUpBtn">Sign Up</button>
+        </div>
       </div>
     </div>
   );
