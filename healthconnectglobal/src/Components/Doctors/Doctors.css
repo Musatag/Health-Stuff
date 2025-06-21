@@ -1,102 +1,151 @@
-.doctors {
+.outer-container {
+  width: 90%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  margin: 40px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.doctors h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #333;
-}
-.doctors-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 2rem;
+  align-items: flex-start;
   justify-content: center;
-}
-.doctor-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  padding: 2rem;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 20px auto;
   border-radius: 8px;
-  padding: 15px;
-  width: 250px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-.doctor-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-.doctor-card h2 {
-  font-size: 18px;
-  margin: 10px 0 0 0;
-  color: #333;
-}
-.doctor-card p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  padding: 2px;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 
-.doctor-details {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 5px;
-  background-color: #fff;
-  border-radius: 8px;
+.expanded-doctor-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-.doctor-details p .rating {
-  color: #bca10b;
-}
-.colon {
-  margin-left: auto;
-}
-.doctor-details p .align-right {
-  width: 80px;
-  margin-left: 20px;
-}
-.doctor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.doctorCard-buttons {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  gap: 10px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out forwards;
 }
-.doctor-button {
-  background-color: #bca10b;
-  font-size: 14px;
-  gap: 10px;
-  color: white;
+
+.expanded-doctor-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
   border: none;
-  border-radius: 4px;
+  font-size: 2em;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  color: #333;
 }
-.view-profile {
-  padding: 4px 8px;
+
+.expanded-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
 }
-.book-appointment {
-  padding: 5px 10px;
+
+.expanded-header img.expanded-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.expanded-header h3 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #222;
+}
+
+.expanded-header p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.expanded-details h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+  padding-bottom: 5px;
+}
+
+.expanded-details p {
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  border-left: 3px solid #007bff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.review-item p {
+  margin: 3px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .expanded-doctor-content {
+    width: 90%;
+    height: 450px;
+  }
+
+  .expanded-header img.expanded-img {
+    height: 100px;
+    width: 100px;
+  }
+  .expanded-header h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .outer-container {
+    padding: 1rem;
+  }
+  .expanded-doctor-content {
+    width: 95%;
+    padding: 15px;
+  }
 }
